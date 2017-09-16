@@ -20,7 +20,7 @@ private[maybe] object MaybeImpl {
       MaybeImpl(x)
     }
 
-    def unapply[A](mx: Maybe[A]): Option[A] = toOption(mx)
+    def unapply[A](mx: Maybe[A]): Boolean = mx != null
   }
 
   type NixType = { type IsNix = NixTag }

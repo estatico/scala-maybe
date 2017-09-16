@@ -59,7 +59,7 @@ class MaybeUnitTest
     val actual = mx.orElse(my)
     val expected = (mx, my) match {
       case (Nix, Nix) => Nix
-      case (Just(x), Nix) => x
+      case (Just(), Nix) => x
       case (Nix, Just(y)) => y
       case (Just(x), Just(_)) => x
     }
